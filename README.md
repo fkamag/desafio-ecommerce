@@ -5,7 +5,7 @@ Desafio do curso de Ciência de Dados - Criando um Banco de Dados para E-commerc
 
 <img src="ER-Ecommerce.png">
 
-## 2 - Criar o scrip SQL para criação do esquema de banco de dados
+## 2 - Criar o script SQL para criação do esquema de banco de dados
 
 ## 3 - Persistência de dados para testes
 
@@ -33,6 +33,9 @@ Criado tabela de endereços, como cada endereço tem cidade e estado que se repe
   - district: bairro
   - zip: CEP
   - id_city: id da cidade para linkar com a tabela de cidades
+  - id_customer: id do cliente para linkar com a tabela de clientes
+  - alias_address: apelido do endereço Ex. casa, trabalho
+
 
 
 
