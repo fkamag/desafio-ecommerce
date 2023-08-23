@@ -46,3 +46,7 @@ CREATE TABLE supplier (
     CONSTRAINT unique_cnpj_suplier UNIQUE(cnpj),
     CONSTRAINT fk_city_supplier FOREIGN KEY (id_city) REFERENCES city (id_city)
 );
+CREATE TABLE category_product (
+	id_category INT AUTO_INCREMENT PRIMARY KEY,
+    name_category VARCHAR(30) NOT NULL
+);

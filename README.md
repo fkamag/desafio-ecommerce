@@ -52,6 +52,9 @@ Criado tabela de fornecedores, e utilizando as tabelas de cidade e estado já cr
 - zip: CEP
 - id_city: id da cidade para linkar com a tabela de cidades
 
+Criado tabela de categoria de produtos
+- id_category: id da categoria de produtos
+- name_category: nome da categoria
 
 ## Considerações Finais
 Foi utilizado o MYSQL Workbench com uma imagem docker mysql para realizar os testes.
