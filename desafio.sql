@@ -59,3 +59,7 @@ CREATE TABLE product (
     CONSTRAINT fk_category FOREIGN KEY (id_category) REFERENCES category_product (id_category),
     CONSTRAINT fk_supplier FOREIGN KEY (id_supplier) REFERENCES supplier (id_supplier)
 );
+CREATE TABLE payment (
+	id_payment INT AUTO_INCREMENT PRIMARY KEY,
+    name_payment VARCHAR(20) NOT NULL
+);

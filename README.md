@@ -63,5 +63,9 @@ Criado tabela de produtos
 - id_category: id da categoria para linkar com a tabela de categorias de produtos
 - id_supplier: id do fornecedor para linkar com a tabela de fornecedores
 
+Criado tabela de pagamentos
+- id_payment - id da forma de pagamento
+- name_payment - tipo da forma de pagamento
+
 ## Considerações Finais
 Foi utilizado o MYSQL Workbench com uma imagem docker mysql para realizar os testes.
