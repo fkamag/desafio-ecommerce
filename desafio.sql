@@ -50,3 +50,12 @@ CREATE TABLE category_product (
 	id_category INT AUTO_INCREMENT PRIMARY KEY,
     name_category VARCHAR(30) NOT NULL
 );
+CREATE TABLE product (
+	id_product INT AUTO_INCREMENT PRIMARY KEY,
+    name_product VARCHAR(30) NOT NULL,
+    unit_value DECIMAL(5,2),
+    id_category INT,
+    id_supplier INT,
+    CONSTRAINT fk_category FOREIGN KEY (id_category) REFERENCES category_product (id_category),
+    CONSTRAINT fk_supplier FOREIGN KEY (id_supplier) REFERENCES supplier (id_supplier)
+);

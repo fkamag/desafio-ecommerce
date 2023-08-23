@@ -56,5 +56,12 @@ Criado tabela de categoria de produtos
 - id_category: id da categoria de produtos
 - name_category: nome da categoria
 
+Criado tabela de produtos
+- id_product: id do produto
+- name_product: nome do produto
+- unit_value: valor unitário do produto
+- id_category: id da categoria para linkar com a tabela de categorias de produtos
+- id_supplier: id do fornecedor para linkar com a tabela de fornecedores
+
 ## Considerações Finais
 Foi utilizado o MYSQL Workbench com uma imagem docker mysql para realizar os testes.
