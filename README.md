@@ -67,5 +67,9 @@ Criado tabela de pagamentos
 - id_payment - id da forma de pagamento
 - name_payment - tipo da forma de pagamento
 
+Criado tabela de status do pedido
+- id_status_order: id do status do pedido
+- name_status_order: nome do status do pedido
+
 ## Considerações Finais
 Foi utilizado o MYSQL Workbench com uma imagem docker mysql para realizar os testes.

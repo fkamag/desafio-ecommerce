@@ -63,3 +63,7 @@ CREATE TABLE payment (
 	id_payment INT AUTO_INCREMENT PRIMARY KEY,
     name_payment VARCHAR(20) NOT NULL
 );
+CREATE TABLE status_order (
+	id_status_order INT AUTO_INCREMENT PRIMARY KEY,
+    name_status_order VARCHAR(20) NOT NULL
+);
