@@ -32,3 +32,17 @@ CREATE TABLE address_customer (
     CONSTRAINT fk_city FOREIGN KEY (id_city) REFERENCES city (id_city),
     CONSTRAINT fk_customer FOREIGN KEY (id_customer) REFERENCES customer (id_customer)
 );
+CREATE TABLE supplier (
+	id_supplier INT AUTO_INCREMENT PRIMARY KEY,
+    trade_supplier VARCHAR(30)  NOT NULL,
+    company_supplier VARCHAR(50) NOT NULL,
+    cnpj CHAR(14) NOT NULL,
+    address_name VARCHAR(80) NOT NULL,
+    address_number INT,
+    district VARCHAR(50),
+    zip CHAR(8),
+    id_city INT,
+    phone VARCHAR(11),
+    CONSTRAINT unique_cnpj_suplier UNIQUE(cnpj),
+    CONSTRAINT fk_city_supplier FOREIGN KEY (id_city) REFERENCES city (id_city)
+);

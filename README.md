@@ -14,6 +14,7 @@ Desafio do curso de Ciência de Dados - Criando um Banco de Dados para E-commerc
 ## Resolução do desafio proposto
 
 Começamos a criação das entidades pelo Cliente com os seguintes campos:
+- id_customer - id do cliente
 - alias_name: ao invés de separar nome em First Name e Last Name optei por utilizar um nome alternativo, que o usuário possa cadastrar o nome que gostaria de ser chamado
 - full_name: nome completo do cliente
 - cpf: único para cada cliente cadastrado
@@ -23,11 +24,14 @@ Decidi não incluir o endereço nesta tabela, entendendo que o cliente pode ter 
 
 Criado tabela de endereços, como cada endereço tem cidade e estado que se repetem, foi criado também uma tabela para cada uma destas entidades, linkando através do id
 - Tabela Estado
+  - id_state: id do estado
   - state_uf: sigla do estado da federação
 - Tabela Cidade
+  - id_city: id da cidade
   - city_name: nome da cidade
   - id_state: id do estado para linkar com a tabela de estados
 - Tabela de endereços
+  - id_address: id do endereço
   - address: logradouro
   - number: número da rua
   - district: bairro
@@ -36,8 +40,17 @@ Criado tabela de endereços, como cada endereço tem cidade e estado que se repe
   - id_customer: id do cliente para linkar com a tabela de clientes
   - alias_address: apelido do endereço Ex. casa, trabalho
 
-
-
+Criado tabela de fornecedores, e utilizando as tabelas de cidade e estado já criada na etapa anterior
+- id_supplier: id do fornecedor
+- trade: nome fantasia
+- company: razão social
+- cnpj: único para cada fornecedor cadastrado
+- phone: número de telefone
+- address: logradouro
+- number: número da rua
+- district: bairro
+- zip: CEP
+- id_city: id da cidade para linkar com a tabela de cidades
 
 
 ## Considerações Finais
