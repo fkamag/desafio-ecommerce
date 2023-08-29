@@ -71,5 +71,14 @@ Criado tabela de status do pedido
 - id_status_order: id do status do pedido
 - name_status_order: nome do status do pedido
 
+Criado tabela de pedidos
+- id_order: id do pedido
+- id_customer: id do cliente linkar com tabela de clientes
+- id_status_order: id do status do pedido linkar com tabela de status
+- id_payment: id da forma de pagamento linkar com tabela de payment
+- value_order: valor total do pedido
+- delivery_fee: taxa de entrega
+
+
 ## Considerações Finais
 Foi utilizado o MYSQL Workbench com uma imagem docker mysql para realizar os testes.

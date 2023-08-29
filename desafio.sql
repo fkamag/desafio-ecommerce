@@ -67,3 +67,14 @@ CREATE TABLE status_order (
 	id_status_order INT AUTO_INCREMENT PRIMARY KEY,
     name_status_order VARCHAR(20) NOT NULL
 );
+CREATE TABLE orders (
+	id_order INT AUTO_INCREMENT PRIMARY KEY,
+    id_customer INT,
+    id_status_order INT,
+    id_payment INT,
+    value_order DECIMAL(10,2),
+    delivery_fee DECIMAL(5,2),
+    CONSTRAINT fk_order_customer FOREIGN KEY (id_customer) REFERENCES customer (id_customer),
+    CONSTRAINT fk_order_status FOREIGN KEY (id_status_order) REFERENCES status_order (id_status_order),
+    CONSTRAINT fk_order_payment FOREIGN KEY (id_payment) REFERENCES payment (id_payment)
+);
