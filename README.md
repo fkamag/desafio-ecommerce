@@ -78,7 +78,14 @@ Criado tabela de pedidos
 - id_payment: id da forma de pagamento linkar com tabela de payment
 - value_order: valor total do pedido
 - delivery_fee: taxa de entrega
+- date_order: data do pedido
 
+Criado tabela pedido x produto
+para que cada pedido possa ter mais de um produto
+- id_order: id do pedido
+- id_product: id do produto
+- quantity: quantidade de produto
+- unit_value: valor unitário do produto
 
 ## Considerações Finais
 Foi utilizado o MYSQL Workbench com uma imagem docker mysql para realizar os testes.

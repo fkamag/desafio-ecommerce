@@ -74,7 +74,14 @@ CREATE TABLE orders (
     id_payment INT,
     value_order DECIMAL(10,2),
     delivery_fee DECIMAL(5,2),
+    data_order DATETIME,
     CONSTRAINT fk_order_customer FOREIGN KEY (id_customer) REFERENCES customer (id_customer),
     CONSTRAINT fk_order_status FOREIGN KEY (id_status_order) REFERENCES status_order (id_status_order),
     CONSTRAINT fk_order_payment FOREIGN KEY (id_payment) REFERENCES payment (id_payment)
+);
+CREATE TABLE order_product (
+	id_order INT,
+    id_product INT,
+    quantity INT,
+    unit_value DECIMAL(5,2)
 );
