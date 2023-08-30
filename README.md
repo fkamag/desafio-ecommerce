@@ -7,10 +7,6 @@ Desafio do curso de Ciência de Dados - Criando um Banco de Dados para E-commerc
 
 ## 2 - Criar o script SQL para criação do esquema de banco de dados
 
-## 3 - Persistência de dados para testes
-
-## 4 - Recuperação de informações com queries SQL
-
 ## Resolução do desafio proposto
 
 Começamos a criação das entidades pelo Cliente com os seguintes campos:
@@ -86,6 +82,25 @@ para que cada pedido possa ter mais de um produto
 - id_product: id do produto linkar com tabela de produtos
 - quantity: quantidade de produto
 - unit_value: valor unitário do produto
+
+Criado tabela estoque
+- id_stock: id do estoque
+- locality: local do estoque
+
+Criado tabela estoque x produto
+- id_stock: id do estoque linkar com a tabela estoque
+- id_product: id do produto linkar com a tabela produto
+- quantity: quantidade de produto em estoque
+
+
+Resultado após primeiro refinamento
+<img src="EER-ap%C3%B3s-primeiro-refinamento.png">
+
+
+## 3 - Persistência de dados para testes
+
+## 4 - Recuperação de informações com queries SQL
+
 
 ## Considerações Finais
 Foi utilizado o MYSQL Workbench com uma imagem docker mysql para realizar os testes.
