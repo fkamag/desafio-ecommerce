@@ -83,5 +83,8 @@ CREATE TABLE order_product (
 	id_order INT,
     id_product INT,
     quantity INT,
-    unit_value DECIMAL(5,2)
+    unit_value DECIMAL(5,2),
+    CONSTRAINT fk_order_product FOREIGN KEY (id_order) REFERENCES orders (id_order),
+    CONSTRAINT fk_product_order FOREIGN KEY (id_product) REFERENCES product (id_product),
+    PRIMARY KEY (id_order, id_product)
 );

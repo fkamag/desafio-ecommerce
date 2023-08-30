@@ -82,8 +82,8 @@ Criado tabela de pedidos
 
 Criado tabela pedido x produto
 para que cada pedido possa ter mais de um produto
-- id_order: id do pedido
-- id_product: id do produto
+- id_order: id do pedido linkar com tabela de pedidos
+- id_product: id do produto linkar com tabela de produtos
 - quantity: quantidade de produto
 - unit_value: valor unitário do produto
 
