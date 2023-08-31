@@ -125,6 +125,14 @@ Criado tabela pessoa jurídica (legal_person):
 - zip: CEP
 - id_city: id da cidade para linkar com a tabela de cidades
 
+Tabela de pedidos:
+- retirado o id_payment para poder ter mais de uma forma de pagamento no pedido
+
+Criado tabela pedido x forma de pagamento:
+id_order: id do pedido
+id_payment: id da forma de pagamento
+value_payment: valor do pagamento
+
 ## 3 - Persistência de dados para testes
 
 ## 4 - Recuperação de informações com queries SQL
