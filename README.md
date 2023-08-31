@@ -145,6 +145,9 @@ Criado tabela delivery:
 - id_status: id do status do delivery linkar com a tabela status do delivery
 - tracking: código do rastreio
 
+Resultado após segundo refinamento
+<img src="EER-segundo-refinamento.png">
+
 
 ## 3 - Persistência de dados para testes
 
