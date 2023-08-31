@@ -127,11 +127,24 @@ Criado tabela pessoa jurídica (legal_person):
 
 Tabela de pedidos:
 - retirado o id_payment para poder ter mais de uma forma de pagamento no pedido
+- retirado o delivery_fee
 
 Criado tabela pedido x forma de pagamento:
 id_order: id do pedido
 id_payment: id da forma de pagamento
 value_payment: valor do pagamento
+
+Criado tabela status do delivery:
+- id_status_delivery: id do status do delivery
+- name_status_delivery: nome do status do delivery
+
+Criado tabela delivery:
+- id_delivery: id do delivery
+- id_order: id do pedido linkar com a tabela pedidos
+- delivery_fee: valor da taxa de entrega
+- id_status: id do status do delivery linkar com a tabela status do delivery
+- tracking: código do rastreio
+
 
 ## 3 - Persistência de dados para testes
 

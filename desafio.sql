@@ -94,7 +94,6 @@ CREATE TABLE orders (
     id_customer INT,
     id_status_order INT,
     value_order DECIMAL(10,2),
-    delivery_fee DECIMAL(5,2),
     data_order DATETIME,
     CONSTRAINT fk_order_customer FOREIGN KEY (id_customer) REFERENCES customer (id_customer),
     CONSTRAINT fk_order_status FOREIGN KEY (id_status_order) REFERENCES status_order (id_status_order)
@@ -127,4 +126,17 @@ CREATE TABLE product_stock (
     CONSTRAINT fk_product_stock FOREIGN KEY (id_product) REFERENCES product (id_product),
     CONSTRAINT fk_stock_product FOREIGN KEY (id_stock) REFERENCES stock (id_stock),
     PRIMARY KEY (id_product, id_stock)
+);
+CREATE TABLE status_delivery (
+	id_status_delivery INT AUTO_INCREMENT PRIMARY KEY,
+    name_status_delivery VARCHAR(20)
+);
+CREATE TABLE delivery (
+	id_delivery INT AUTO_INCREMENT PRIMARY KEY,
+    id_order INT,
+	delivery_fee DECIMAL(5,2),
+    id_status INT,
+    tracking VARCHAR(20),
+    CONSTRAINT fk_delivery_order FOREIGN KEY (id_order) REFERENCES orders (id_order),
+    CONSTRAINT fk_delivery_status FOREIGN KEY (id_status) REFERENCES status_delivery (id_status_delivery)
 );
