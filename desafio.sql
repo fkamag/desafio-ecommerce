@@ -3,12 +3,7 @@ CREATE DATABASE ecommerce;
 USE ecommerce;
 CREATE TABLE customer (
 	id_customer INT AUTO_INCREMENT PRIMARY KEY,
-    alias_name VARCHAR(20)  NOT NULL,
-    full_name VARCHAR(50) NOT NULL,
-    cpf CHAR(11) NOT NULL,
-    birth_date DATE NOT NULL,
-    phone VARCHAR(11),
-    CONSTRAINT unique_cpf_costumer UNIQUE(cpf)
+    type_person ENUM('NP', 'LP')
 );
 CREATE TABLE state (
 	id_state INT AUTO_INCREMENT PRIMARY KEY,
@@ -19,6 +14,33 @@ CREATE TABLE city (
     city_name VARCHAR(50) NOT NULL,
     id_state INT,
     CONSTRAINT fk_state FOREIGN KEY (id_state) REFERENCES state (id_state)
+);
+CREATE TABLE natural_person (
+	id_natural_person INT AUTO_INCREMENT PRIMARY KEY,
+    id_customer INT,
+    alias_name VARCHAR(20)  NOT NULL,
+    full_name VARCHAR(50) NOT NULL,
+    cpf CHAR(11) NOT NULL,
+    birth_date DATE NOT NULL,
+    phone VARCHAR(11),
+    CONSTRAINT unique_cpf_costumer UNIQUE(cpf),
+    CONSTRAINT fk_natural_person FOREIGN KEY (id_customer) REFERENCES customer (id_customer)
+);
+CREATE TABLE legal_person (
+	id_legal_person INT AUTO_INCREMENT PRIMARY KEY,
+    id_customer INT,
+    trade_supplier VARCHAR(30)  NOT NULL,
+    company_supplier VARCHAR(50) NOT NULL,
+    cnpj CHAR(14) NOT NULL,
+    address_name VARCHAR(80) NOT NULL,
+    address_number INT,
+    district VARCHAR(50),
+    zip CHAR(8),
+    id_city INT,
+    phone VARCHAR(11),
+    CONSTRAINT unique_cnpj_consumer UNIQUE(cnpj),
+    CONSTRAINT fk_legal_person FOREIGN KEY (id_customer) REFERENCES customer (id_customer),
+    CONSTRAINT fk_city_consumer FOREIGN KEY (id_city) REFERENCES city (id_city)
 );
 CREATE TABLE address_customer (
 	id_address INT AUTO_INCREMENT PRIMARY KEY,
@@ -87,4 +109,16 @@ CREATE TABLE order_product (
     CONSTRAINT fk_order_product FOREIGN KEY (id_order) REFERENCES orders (id_order),
     CONSTRAINT fk_product_order FOREIGN KEY (id_product) REFERENCES product (id_product),
     PRIMARY KEY (id_order, id_product)
+);
+CREATE TABLE stock (
+	id_stock INT AUTO_INCREMENT PRIMARY KEY,
+    locality VARCHAR(30)
+);
+CREATE TABLE product_stock (
+	id_product INT,
+    id_stock INT,
+    quantity DECIMAL(5,2),
+    CONSTRAINT fk_product_stock FOREIGN KEY (id_product) REFERENCES product (id_product),
+    CONSTRAINT fk_stock_product FOREIGN KEY (id_stock) REFERENCES stock (id_stock),
+    PRIMARY KEY (id_product, id_stock)
 );

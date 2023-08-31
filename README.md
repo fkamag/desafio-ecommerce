@@ -9,7 +9,8 @@ Desafio do curso de Ciência de Dados - Criando um Banco de Dados para E-commerc
 
 ## Resolução do desafio proposto
 
-Começamos a criação das entidades pelo Cliente com os seguintes campos:
+Fazendo primeiro refinamento do projeto inicial
+Criado tabela cliente com os seguintes campos:
 - id_customer - id do cliente
 - alias_name: ao invés de separar nome em First Name e Last Name optei por utilizar um nome alternativo, que o usuário possa cadastrar o nome que gostaria de ser chamado
 - full_name: nome completo do cliente
@@ -96,6 +97,33 @@ Criado tabela estoque x produto
 Resultado após primeiro refinamento
 <img src="EER-ap%C3%B3s-primeiro-refinamento.png">
 
+Fazendo segundo refinamento
+
+Alterado tabela cliente:
+- id_consumer: id do cliente
+- type_person: tipo do cliente (NP, LP)
+
+Criado tabela pessoa física (natural_person):
+- id_natural_person: id da pessoa física
+- id_customer: id do cliente linkar com a tabela cliente
+- alias_name: apelido do cliente
+- full_name: nome completo do cliente
+- cpf: único para cada cliente cadastrado
+- birth_date: data de nascimento
+- phone: número de telefone
+
+Criado tabela pessoa jurídica (legal_person):
+- id_legal_person: id da pessoa jurídica
+- id_customer: id do cliente linkar com a tabela cliente
+- trade: nome fantasia
+- company: razão social
+- cnpj: único para cada fornecedor cadastrado
+- phone: número de telefone
+- address: logradouro
+- number: número da rua
+- district: bairro
+- zip: CEP
+- id_city: id da cidade para linkar com a tabela de cidades
 
 ## 3 - Persistência de dados para testes
 
