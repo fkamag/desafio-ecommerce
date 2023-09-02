@@ -151,6 +151,8 @@ Resultado após segundo refinamento
 
 ## 3 - Persistência de dados para testes
 
+Utilizado arquivo inserts.sql para popular o banco de dados.
+
 ## 4 - Recuperação de informações com queries SQL
 
 
