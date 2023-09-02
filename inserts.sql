@@ -9,7 +9,7 @@ VALUES
 INSERT INTO supplier
 VALUES
 	(1, 'Casa das Coxinhas', 'EMF Lanchonete Ltda', '11222333000100', 'Rua Penha', 575, 'Centro', '11222000', 1, '1123456789'),
-    (2, 'Pizza e Cia', 'Pizzaria Nova Ltda', '22333444000155', 'Rua José', 210, 'Centro', '11555000', 1, '1133004400'),
+    (2, 'Pizza e Cia', 'Pizzaria Nova Ltda', '22333444000155', 'Rua José', 210, 'Centro', '11555000', 1, '11933004400'),
     (3, 'Top Burguer', 'Lanches Zero Ltda', '33444555000166', 'Rua Barão', 315, 'Jd Primavera', '18001000', 2, '1522223333'),
     (4, 'Acaí Town', 'Murilo Souza EPP', '44555666000177', 'Rua Cruzeiro', 180, 'Centro', '18270000', 3, '1533050008');
 INSERT INTO stock

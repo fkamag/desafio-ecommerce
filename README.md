@@ -155,6 +155,12 @@ Utilizado arquivo inserts.sql para popular o banco de dados.
 
 ## 4 - Recuperação de informações com queries SQL
 
+- relação de fornecedores por ordem alfabética com máscara no CNPJ e Telefone
+- relatório de produtos por ordem de fornecedor e quantidade em estoque
+- Resumo das vendas de um determinado dia com quantidade de pedidos, valor total dos pedidos, ticket médio, menor valor de pedido e maior valor de pedido
+- Quantidade de pedidos por consumidor
+- Pedidos com mais de uma forma de pagamento
+
 
 ## Considerações Finais
 Foi utilizado o MYSQL Workbench com uma imagem docker mysql para realizar os testes.
